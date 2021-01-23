@@ -4,7 +4,11 @@
   "description": "\"To create an end to end automation framework using js technologies\"",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./testcases"
+    "test:chrome": "testcafe chrome ./testcases",
+    "test:chrome:headless":"testcafe chrome:headless ./testcases",
+    "test:firefox":"testcafe firefox ./testcases",
+    "test:edge":"testcafe edge ./testcases",
+    "test:ie":"testcafe ie ./testcases"
   },
   "keywords": [
     "e2e",
@@ -15,6 +19,8 @@
   "author": "Joemon David",
   "license": "ISC",
   "dependencies": {
+
+    "prettier": "^2.2.1",
     "testcafe": "^1.10.1"
   }
 }
