@@ -11,4 +11,7 @@ test('Login to DemoBlaze app', async t => {
     .typeText('#loginusername','joemon')
     .typeText('#loginpassword','joemon')
     .click('[onclick="logIn()"]')
+    .expect(Selector('#nameofuser').innerText).contains('joemon');
 });
+
+
