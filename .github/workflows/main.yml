@@ -18,7 +18,7 @@ jobs:
 
       - name: Backup MongoDB
         run: |
-          mongodump -v --db ${{ secrets.PERFORMANCE_DB_NAME }} --gzip --archive=joemonT01.archive  ${{ secrets.PERFORMANCE_DB_CS }}
+          mongodump  --db ${{ secrets.PERFORMANCE_DB_NAME }} --gzip --archive=joemonT01.archive  ${{ secrets.PERFORMANCE_DB_CS }}
       - name: Restore MongoDB
         run: |
-          mongorestore -v --drop --gzip --archive=joemonT01.archive  ${{ secrets.PERFORMANCE_DB_CS }}
+          mongorestore  --drop --gzip --archive=joemonT01.archive  ${{ secrets.PERFORMANCE_DB_CS }}
