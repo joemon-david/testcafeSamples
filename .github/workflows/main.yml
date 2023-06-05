@@ -18,7 +18,7 @@ jobs:
 
       - name: Backup MongoDB
         run: |
-          mongodump -v --db joemonT01 --gzip --archive=joemonT01.archive mongodb+srv://joemondavid:Apple123@joemonqa.vr6mw67.mongodb.net/joemonT0
+          mongodump -v --db joemonT01 --gzip --archive=joemonT01.archive mongodb+srv://joemondavid:Apple123@joemonqa.vr6mw67.mongodb.net/joemonT01
       - name: Restore MongoDB
         run: |
           mongorestore -v --drop --gzip --archive=joemonT01.archive mongodb+srv://joemondavid:Apple123@joemonqa.vr6mw67.mongodb.net/joemonT01
